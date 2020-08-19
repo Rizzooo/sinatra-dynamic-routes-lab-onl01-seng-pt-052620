@@ -20,8 +20,8 @@ class App < Sinatra::Base
     
     @num.times do 
       @outcome += @phrase
-      
     end
+    "#{@outcome}"
   end
   
   
