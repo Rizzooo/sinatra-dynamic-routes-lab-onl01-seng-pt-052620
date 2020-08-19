@@ -42,14 +42,15 @@ class App < Sinatra::Base
     if @op == "add"
       @answer = @num1 + @num2 
     elsif @op = "subtract"
-      @num1 - @num2
+      @answer = @num1 - @num2
     elsif @op = "multiply"
-      @num1 * @num2
+      @answer = @num1 * @num2
     elsif @op = "divide"
-      @num1 / @num2
+      @answer = @num1 / @num2
     else
-      return "No comment"
+      @answer = "No comment"
     end
+    "#{@answer}"
   end
   
 end
