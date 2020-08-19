@@ -22,7 +22,7 @@ class App < Sinatra::Base
     end
   end
   
-  get '/say/:word1/:word2/:word3/:word4/:word5'
+  get '/say/:word1/:word2/:word3/:word4/:word5' do
     @word1 = params[:word1]
     @word2 = params[:word2]
     @word3 = params[:word3]
@@ -32,7 +32,7 @@ class App < Sinatra::Base
     "#{@word1} #{@word2} #{@word3} #{@word4} #{@word5}"
   end
   
-  get '/:operation/:number1/:number2'
+  get '/:operation/:number1/:number2' do 
     op = params[:operation]
     @num1 = params[:number1].to_i
     @num2 = params[:number2].to_i
